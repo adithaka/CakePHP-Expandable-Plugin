@@ -169,6 +169,7 @@ class ExpandableBehavior extends ModelBehavior {
 				));
 				$data = array('value' => $this->encode($Model, $val, $key));
 				if (!empty($fieldId)) {
+					$Model->{$with}->create();
 					$Model->{$with}->id = $fieldId;
 				} else {
 					$Model->{$with}->create();
